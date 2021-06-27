@@ -46,6 +46,8 @@ abstract class AccountState {
 }
 
 class ActiveState extends AccountState {
+  // normally there would be some kind of EventScheduler which would hava a reference to account 
+  // and here we would pass event scheduler object
   constructor(private account: Account) {
     super();
   }
