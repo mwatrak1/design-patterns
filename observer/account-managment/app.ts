@@ -1,8 +1,10 @@
+// Observer
 interface IObserver {
   update(): void;
   account: Account;
 }
 
+// Subject
 interface Subject {
   observers: IObserver[];
   attach(observer: IObserver): void;
@@ -10,6 +12,7 @@ interface Subject {
   notify(): void;
 }
 
+// ConcreteSubject
 class Account implements Subject {
   observers: IObserver[];
 
@@ -32,6 +35,7 @@ class Account implements Subject {
   }
 }
 
+// ConcreteObserverA
 class EmailNotifier implements IObserver {
   constructor(public account: Account) {}
   update() {
@@ -39,6 +43,7 @@ class EmailNotifier implements IObserver {
   }
 }
 
+// ConcreteObserverB
 class SMSNotifier implements IObserver {
   constructor(public account: Account) {}
   update() {
@@ -46,6 +51,7 @@ class SMSNotifier implements IObserver {
   }
 }
 
+// ConcreteObserverC
 class AccountExpireContent implements IObserver {
   constructor(public account: Account) {}
   update() {
