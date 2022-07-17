@@ -1,3 +1,3 @@
 ## Abstract Factory Pattern Diagram
 
-![UML Diagram](./.svg)
+[comment]: <> (![UML Diagram]&#40;./.svg&#41;)
